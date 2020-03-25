@@ -1,0 +1,1442 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script>
+            jQuery(function($) {
+    function responsiveTable(tableSelector) {
+        var table = $(tableSelector);
+        var allHighlightableCells = table.find('td.highlightable');
+        var firstColumnCells = table.find('td:first-child');
+        table.find('td.cell').click(function(e) {
+            allHighlightableCells.removeClass('highlighted');
+            firstColumnCells.removeClass('dependency');
+            table.find('.relative-dependency').text('');
+            var clickedElem = $(e.target);
+            var td = clickedElem.is('td') ? clickedElem : clickedElem.parent('td');
+            var clickedColumn = td.index() + 1;
+            var clickedRow = td.parent().index() + 1;
+            var cellsInRowOrColumn =
+                'td.highlightable:nth-child(' + clickedColumn + '),tr:nth-child(' + clickedRow + ')>td.highlightable';
+            table.find(cellsInRowOrColumn).addClass('highlighted');
+            var depenencyMethodInFirstColumn = 'tr:nth-child(' + clickedColumn + ')>td:first-child';
+            table.find(depenencyMethodInFirstColumn).addClass('dependency');
+            var dependenciesList = eval(td.parent().children().first().data('dependencies-indices'));
+            dependenciesList.forEach(function(dependency, index) {
+                var selector = 'tr:nth-child(' + (dependency + 2) + ')>td:first-child .relative-dependency';
+                table.find(selector).text('('+ (index + 1) + ')');
+            });
+        });
+    }
+
+    function setUpTableDimensions(tableSelector) {
+        var table = $(tableSelector);
+        var maxWidth = table.find('.horizontal-heading td')
+            .get()
+            .map(function(elem) {
+                return $(elem).width();
+            })
+            .sort(function(l, r) {
+                return parseInt(l) - parseInt(r);
+            })
+            .pop();
+        table.find('.horizontal-heading td').css('maxWidth', '35px');
+        table.find('tr.horizontal-heading>td').css('height', maxWidth);
+    }
+
+    var tableSelector = '#matrixTable';
+    setUpTableDimensions(tableSelector);
+    responsiveTable(tableSelector);
+});
+        </script>
+        <style>
+            #matrixTable {
+    margin-top: 20px;
+}
+#matrixTable td {
+    position: relative;
+    background-clip: padding-box;
+}
+.horizontal-heading td .rotated {
+    margin-bottom: 7px;
+    position: relative;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.horizontal-heading td {
+    vertical-align: bottom;
+}
+.diagonal {
+    background-color: darkgray !important;
+}
+.depends-on {
+    background-color: red !important;
+}
+table {
+    border-collapse: collapse;
+}
+td.cell {
+    text-align: center;
+    border: solid 2px black
+}
+td[data-accessibility] .signature {
+    background-color: white;
+}
+td[data-accessibility=PUBLIC] .signature {
+    color: green;
+}
+td[data-accessibility=PROTECTED] .signature {
+    color: orange;
+}
+td[data-accessibility=PRIVATE] .signature {
+    color: black;
+}
+td[data-accessibility=DEFAULT] .signature {
+    color: blue;
+}
+td[data-static=true] .signature {
+    background-color: #D0D0D0;
+}
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+.description {
+    margin-top: 20px;
+}
+.highlightable.highlighted, .highlightable.highlighted .signature {
+    background-color: yellow;
+}
+.highlightable.dependency, .highlightable.dependency .signature {
+    background-color: #D09CDC;
+}
+tr:first-child td {
+    padding-bottom: 5px;
+}
+[data-override=true].horizontal-content {
+    margin-left: -15px;
+    padding-left: 15px;
+    background-color: orange;
+}
+[data-overloaded=true].horizontal-content {
+    margin-left: -30px;
+    padding-left: 30px;
+    background-color: purple;
+}
+.relative-dependency {
+    position: absolute;
+    left: -60px;
+}
+.index-distance {
+    font-size: 14px;
+}
+.line-distance {
+    font-size: 10px;
+}
+        </style>
+    </head>
+    <body>
+        <div>
+            <span>Penalty function value: 40.0</span>
+            <p>Penalty calculation parameters:</p>
+            <ul>
+                <li>declaration before first usage penalty - 4.0</li>
+                <li>constructos group division penalty - 4.0</li>
+                <li>overload group division penalty - 5.0</li>
+                <li>override group division penalty - 3.0</li>
+                <li>accessors group division penalty - 3.0</li>
+                <li>relative order inconsistency penalty - 1.0</li>
+                <li>dependencies between distant methods penalty - 3.0</li>
+            </ul>
+            <p>Configuration parameters:</p>
+            <ul>
+                <li>screen lines count - 50</li>
+            </ul>
+        </div>
+        <table id="matrixTable" class="centered">
+            <thead></thead>
+            <tbody>
+                <tr class="horizontal-heading">
+                    <td></td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    FileContents(FileText)
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    reportSingleLineComment(String,int,int)
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    reportSingleLineComment(int,int)
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    reportBlockComment(String,int,int,int,int)
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    reportBlockComment(int,int,int,int)
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PRIVATE" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    extractBlockComment(int,int,int,int)
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    getJavadocBefore(int)
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    lineIsBlank(int)
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    lineIsComment(int)
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PRIVATE" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    line(int)
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    getSingleLineComments()
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    getBlockComments()
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    hasIntersectionWithComment(int,int,int,int)
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PRIVATE" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    hasIntersectionWithBlockComment(int,int,int,int)
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PRIVATE" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    hasIntersectionWithSingleLineComment(int,int,int,int)
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    getText()
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    getLines()
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    getLine(int)
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    getFileName()
+                                </span>
+                            </div>
+                        </td>
+                                            <td class="highlightable" data-accessibility="PUBLIC" data-static="false">
+                            <div class="rotated">
+                                <span class="signature">
+                                    inPackageInfo()
+                                </span>
+                            </div>
+                        </td>
+                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            FileContents(FileText)
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[2,]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="true">
+                                    <span class="horizontal-content" data-override="true">
+                                        <span class="signature">
+                                            reportSingleLineComment(String,int,int)
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell depends-on">
+                                        <span class="index-distance">1</span>/<span class="line-distance">11</span>
+                                    </td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[9,]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="true">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            reportSingleLineComment(int,int)
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell depends-on">
+                                        <span class="index-distance">7</span>/<span class="line-distance">119</span>
+                                    </td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[4,]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="true">
+                                    <span class="horizontal-content" data-override="true">
+                                        <span class="signature">
+                                            reportBlockComment(String,int,int,int,int)
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell depends-on">
+                                        <span class="index-distance">1</span>/<span class="line-distance">13</span>
+                                    </td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[5,9,]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="true">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            reportBlockComment(int,int,int,int)
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell depends-on">
+                                        <span class="index-distance">1</span>/<span class="line-distance">33</span>
+                                    </td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell depends-on">
+                                        <span class="index-distance">5</span>/<span class="line-distance">98</span>
+                                    </td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PRIVATE"
+                                data-static="false"
+                                data-dependencies-indices="[9,]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            extractBlockComment(int,int,int,int)
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell depends-on">
+                                        <span class="index-distance">4</span>/<span class="line-distance">65</span>
+                                    </td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[7,8,]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            getJavadocBefore(int)
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell depends-on">
+                                        <span class="index-distance">1</span>/<span class="line-distance">17</span>
+                                    </td>
+                                                                                                                                <td class="highlightable cell depends-on">
+                                        <span class="index-distance">2</span>/<span class="line-distance">27</span>
+                                    </td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[9,]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            lineIsBlank(int)
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell depends-on">
+                                        <span class="index-distance">2</span>/<span class="line-distance">22</span>
+                                    </td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[9,]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            lineIsComment(int)
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell depends-on">
+                                        <span class="index-distance">1</span>/<span class="line-distance">12</span>
+                                    </td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PRIVATE"
+                                data-static="false"
+                                data-dependencies-indices="[]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            line(int)
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            getSingleLineComments()
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            getBlockComments()
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[13,14,]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            hasIntersectionWithComment(int,int,int,int)
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell depends-on">
+                                        <span class="index-distance">1</span>/<span class="line-distance">15</span>
+                                    </td>
+                                                                                                                                <td class="highlightable cell depends-on">
+                                        <span class="index-distance">2</span>/<span class="line-distance">42</span>
+                                    </td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PRIVATE"
+                                data-static="false"
+                                data-dependencies-indices="[]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            hasIntersectionWithBlockComment(int,int,int,int)
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PRIVATE"
+                                data-static="false"
+                                data-dependencies-indices="[]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            hasIntersectionWithSingleLineComment(int,int,int,int)
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            getText()
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            getLines()
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            getLine(int)
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            getFileName()
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                    </tr>
+                                            <tr>
+                            <td class="highlightable"
+                                data-accessibility="PUBLIC"
+                                data-static="false"
+                                data-dependencies-indices="[]">
+                                <span class="relative-dependency"></span>
+                                <span class="horizontal-content" data-overloaded="false">
+                                    <span class="horizontal-content" data-override="false">
+                                        <span class="signature">
+                                            inPackageInfo()
+                                        </span>
+                                    </span>
+                                </span>
+                            </td>
+                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell"></td>
+                                                                                                                                <td class="highlightable cell diagonal">-</td>
+                                                                                    </tr>
+                                </tbody>
+        </table>
+        <div class="centered description">
+            In the matrix above, methods situated in the order they appear
+            in class definition(first method occupies first row and first column,
+            second method occupies second row and second column an so on). Text color
+            indicates accessibility of methods in the following way:
+            <ul style="background-color: lightgray">
+                <li>public - <span style="color: green;">GREEN</span></li>
+                <li>protected - <span style="color: orange;">ORANGE</span></li>
+                <li>private - <span>BLACK</span></li>
+                <li>default - <span style="color: blue;">BLUE</span></li>
+            </ul>
+            <p>
+                <span style="background-color: lightgrey;">Grey</span> background color indicates that method is static.
+            </p>
+            <p>
+                <span style="background-color: orange;">Orange</span> strip indicates that method overrides some method.
+            </p>
+            <p>
+                <span style="background-color: purple;">Purple</span> strip indicates that method is overloaded.
+            </p>
+            <p>
+                If some method depends on another method(by calling it), then matrix
+                cell situated at intersection of caller`s row and callee`s column is displayed
+                in red and number in this cell indicates distance between methods
+                (index distance / line distance, see below for description) and diagonal cells
+                are always displayed in grey.
+                Distance values are calculated using two metrics:
+                <ul>
+                    <li>
+                        Index distance: Absolute difference between methods indices -
+                        <i>abs(firstMethodIndex - secondMethodIndex)</i>.
+                    </li>
+                    <li>
+                        Line distance: Absolute difference between methods first line indices -
+                        <i>abs(firstMethodLineIndex - secondMethodLineIndex)</i>
+                    </li>
+                </ul>
+            <p>
+                When some table cell gets clicked:
+                <ul>
+                    <li>
+                        corresponding table row and column become highlighted in
+                        <span style="background-color: yellow;">yellow</span>
+                    </li>
+                    <li>
+                        method signature of method with index corresponding
+                        to highlighted column become highlighted in
+                        <span style="background-color: #D09CDC;">light purple</span>
+                    </li>
+                    <li>
+                        order of calls to methods called from method in selected row
+                        appears aside from first column of table in round parenthesis
+                    </li>
+                </ul
+        </div>
+        <h4>Source file</h4>
+        <!-- Library -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeDefault.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shAutoloader.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushJava.min.js" type="text/javascript"></script>
+        <!-- Source code -->
+        <script type="syntaxhighlighter" class="brush: java; quick-code: false;"><![CDATA[////////////////////////////////////////////////////////////////////////////////
+// checkstyle: Checks Java source code for adherence to a set of rules.
+// Copyright (C) 2001-2020 the original author or authors.
+//
+// This library is free software; you can redistribute it and/or
+// modify it under the terms of the GNU Lesser General Public
+// License as published by the Free Software Foundation; either
+// version 2.1 of the License, or (at your option) any later version.
+//
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+// Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public
+// License along with this library; if not, write to the Free Software
+// Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+////////////////////////////////////////////////////////////////////////////////
+
+package com.puppycrawl.tools.checkstyle.api;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Pattern;
+
+import com.puppycrawl.tools.checkstyle.grammar.CommentListener;
+import com.puppycrawl.tools.checkstyle.utils.CommonUtil;
+
+/**
+ * Represents the contents of a file.
+ *
+ */
+public final class FileContents implements CommentListener {
+
+    /**
+     * The pattern to match a single line comment containing only the comment
+     * itself -- no code.
+     */
+    private static final String MATCH_SINGLELINE_COMMENT_PAT = "^\\s*//.*$";
+    /** Compiled regexp to match a single-line comment line. */
+    private static final Pattern MATCH_SINGLELINE_COMMENT = Pattern
+            .compile(MATCH_SINGLELINE_COMMENT_PAT);
+
+    /** The file name. */
+    private final String fileName;
+
+    /** The text. */
+    private final FileText text;
+
+    /**
+     * Map of the Javadoc comments indexed on the last line of the comment.
+     * The hack is it assumes that there is only one Javadoc comment per line.
+     */
+    private final Map<Integer, TextBlock> javadocComments = new HashMap<>();
+    /** Map of the C++ comments indexed on the first line of the comment. */
+    private final Map<Integer, TextBlock> cppComments = new HashMap<>();
+
+    /**
+     * Map of the C comments indexed on the first line of the comment to a list
+     * of comments on that line.
+     */
+    private final Map<Integer, List<TextBlock>> clangComments = new HashMap<>();
+
+    /**
+     * Creates a new {@code FileContents} instance.
+     *
+     * @param text the contents of the file
+     */
+    public FileContents(FileText text) {
+        fileName = text.getFile().toString();
+        this.text = new FileText(text);
+    }
+
+    @Override
+    public void reportSingleLineComment(String type, int startLineNo,
+            int startColNo) {
+        reportSingleLineComment(startLineNo, startColNo);
+    }
+
+    /**
+     * Report the location of a single line comment.
+     * @param startLineNo the starting line number
+     * @param startColNo the starting column number
+     **/
+    public void reportSingleLineComment(int startLineNo, int startColNo) {
+        final String line = line(startLineNo - 1);
+        final String[] txt = {line.substring(startColNo)};
+        final Comment comment = new Comment(txt, startColNo, startLineNo,
+                line.length() - 1);
+        cppComments.put(startLineNo, comment);
+    }
+
+    @Override
+    public void reportBlockComment(String type, int startLineNo,
+            int startColNo, int endLineNo, int endColNo) {
+        reportBlockComment(startLineNo, startColNo, endLineNo, endColNo);
+    }
+
+    /**
+     * Report the location of a block comment.
+     * @param startLineNo the starting line number
+     * @param startColNo the starting column number
+     * @param endLineNo the ending line number
+     * @param endColNo the ending column number
+     **/
+    public void reportBlockComment(int startLineNo, int startColNo,
+            int endLineNo, int endColNo) {
+        final String[] cComment = extractBlockComment(startLineNo, startColNo,
+                endLineNo, endColNo);
+        final Comment comment = new Comment(cComment, startColNo, endLineNo,
+                endColNo);
+
+        // save the comment
+        if (clangComments.containsKey(startLineNo)) {
+            final List<TextBlock> entries = clangComments.get(startLineNo);
+            entries.add(comment);
+        }
+        else {
+            final List<TextBlock> entries = new ArrayList<>();
+            entries.add(comment);
+            clangComments.put(startLineNo, entries);
+        }
+
+        // Remember if possible Javadoc comment
+        final String firstLine = line(startLineNo - 1);
+        if (firstLine.contains("/**") && !firstLine.contains("/**/")) {
+            javadocComments.put(endLineNo - 1, comment);
+        }
+    }
+
+    /**
+     * Returns the specified block comment as a String array.
+     * @param startLineNo the starting line number
+     * @param startColNo the starting column number
+     * @param endLineNo the ending line number
+     * @param endColNo the ending column number
+     * @return block comment as an array
+     **/
+    private String[] extractBlockComment(int startLineNo, int startColNo,
+            int endLineNo, int endColNo) {
+        final String[] returnValue;
+        if (startLineNo == endLineNo) {
+            returnValue = new String[1];
+            returnValue[0] = line(startLineNo - 1).substring(startColNo,
+                    endColNo + 1);
+        }
+        else {
+            returnValue = new String[endLineNo - startLineNo + 1];
+            returnValue[0] = line(startLineNo - 1).substring(startColNo);
+            for (int i = startLineNo; i < endLineNo; i++) {
+                returnValue[i - startLineNo + 1] = line(i);
+            }
+            returnValue[returnValue.length - 1] = line(endLineNo - 1).substring(0,
+                    endColNo + 1);
+        }
+        return returnValue;
+    }
+
+    /**
+     * Returns the Javadoc comment before the specified line.
+     * A return value of {@code null} means there is no such comment.
+     * @param lineNoBefore the line number to check before
+     * @return the Javadoc comment, or {@code null} if none
+     **/
+    public TextBlock getJavadocBefore(int lineNoBefore) {
+        // Lines start at 1 to the callers perspective, so need to take off 2
+        int lineNo = lineNoBefore - 2;
+
+        // skip blank lines
+        while (lineNo > 0 && (lineIsBlank(lineNo) || lineIsComment(lineNo))) {
+            lineNo--;
+        }
+
+        return javadocComments.get(lineNo);
+    }
+
+    /**
+     * Checks if the specified line is blank.
+     * @param lineNo the line number to check
+     * @return if the specified line consists only of tabs and spaces.
+     **/
+    public boolean lineIsBlank(int lineNo) {
+        return CommonUtil.isBlank(line(lineNo));
+    }
+
+    /**
+     * Checks if the specified line is a single-line comment without code.
+     * @param lineNo  the line number to check
+     * @return if the specified line consists of only a single line comment
+     *         without code.
+     **/
+    public boolean lineIsComment(int lineNo) {
+        return MATCH_SINGLELINE_COMMENT.matcher(line(lineNo)).matches();
+    }
+
+    /**
+     * Get a single line.
+     * For internal use only, as getText().get(lineNo) is just as
+     * suitable for external use and avoids method duplication.
+     * @param lineNo the number of the line to get
+     * @return the corresponding line, without terminator
+     * @throws IndexOutOfBoundsException if lineNo is invalid
+     */
+    private String line(int lineNo) {
+        return text.get(lineNo);
+    }
+
+    /**
+     * Returns a map of all the single line comments. The key is a line number,
+     * the value is the comment {@link TextBlock} at the line.
+     * @return the Map of comments
+     */
+    public Map<Integer, TextBlock> getSingleLineComments() {
+        return Collections.unmodifiableMap(cppComments);
+    }
+
+    /**
+     * Returns a map of all block comments. The key is the line number, the
+     * value is a {@link List} of block comment {@link TextBlock}s
+     * that start at that line.
+     * @return the map of comments
+     */
+    public Map<Integer, List<TextBlock>> getBlockComments() {
+        return Collections.unmodifiableMap(clangComments);
+    }
+
+    /**
+     * Checks if the specified position intersects with a comment.
+     * @param startLineNo the starting line number
+     * @param startColNo the starting column number
+     * @param endLineNo the ending line number
+     * @param endColNo the ending column number
+     * @return true if the positions intersects with a comment.
+     **/
+    public boolean hasIntersectionWithComment(int startLineNo,
+            int startColNo, int endLineNo, int endColNo) {
+        return hasIntersectionWithBlockComment(startLineNo, startColNo, endLineNo, endColNo)
+                || hasIntersectionWithSingleLineComment(startLineNo, startColNo, endLineNo,
+                        endColNo);
+    }
+
+    /**
+     * Checks if the specified position intersects with a block comment.
+     * @param startLineNo the starting line number
+     * @param startColNo the starting column number
+     * @param endLineNo the ending line number
+     * @param endColNo the ending column number
+     * @return true if the positions intersects with a block comment.
+     */
+    private boolean hasIntersectionWithBlockComment(int startLineNo, int startColNo,
+            int endLineNo, int endColNo) {
+        boolean hasIntersection = false;
+        // Check C comments (all comments should be checked)
+        final Collection<List<TextBlock>> values = clangComments.values();
+        for (final List<TextBlock> row : values) {
+            for (final TextBlock comment : row) {
+                if (comment.intersects(startLineNo, startColNo, endLineNo, endColNo)) {
+                    hasIntersection = true;
+                    break;
+                }
+            }
+            if (hasIntersection) {
+                break;
+            }
+        }
+        return hasIntersection;
+    }
+
+    /**
+     * Checks if the specified position intersects with a single line comment.
+     * @param startLineNo the starting line number
+     * @param startColNo the starting column number
+     * @param endLineNo the ending line number
+     * @param endColNo the ending column number
+     * @return true if the positions intersects with a single line comment.
+     */
+    private boolean hasIntersectionWithSingleLineComment(int startLineNo, int startColNo,
+            int endLineNo, int endColNo) {
+        boolean hasIntersection = false;
+        // Check CPP comments (line searching is possible)
+        for (int lineNumber = startLineNo; lineNumber <= endLineNo;
+             lineNumber++) {
+            final TextBlock comment = cppComments.get(lineNumber);
+            if (comment != null && comment.intersects(startLineNo, startColNo,
+                    endLineNo, endColNo)) {
+                hasIntersection = true;
+                break;
+            }
+        }
+        return hasIntersection;
+    }
+
+    /**
+     * Get the full text of the file.
+     * @return an object containing the full text of the file
+     */
+    public FileText getText() {
+        return new FileText(text);
+    }
+
+    /**
+     * Gets the lines in the file.
+     * @return the lines in the file
+     */
+    public String[] getLines() {
+        return text.toLinesArray();
+    }
+
+    /**
+     * Get the line from text of the file.
+     * @param index index of the line
+     * @return line from text of the file
+     */
+    public String getLine(int index) {
+        return text.get(index);
+    }
+
+    /**
+     * Gets the name of the file.
+     * @return the name of the file
+     */
+    public String getFileName() {
+        return fileName;
+    }
+
+    /**
+     * Checks if the current file is a package-info.java file.
+     * @return true if the package file.
+     */
+    public boolean inPackageInfo() {
+        return fileName.endsWith("package-info.java");
+    }
+
+}]]></script>
+        <script type="text/javascript">
+            SyntaxHighlighter.all()
+        </script>
+    </body>
+</html>

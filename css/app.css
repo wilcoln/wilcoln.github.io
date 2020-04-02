@@ -13485,7 +13485,7 @@ p {
 }
 
 main + div footer {
-  min-height: 55rem;
+  min-height: 58rem;
   background-color: rgba(0, 0, 0, 0.9);
   padding-bottom: 0px;
   position: fixed;

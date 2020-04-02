@@ -36,3 +36,7 @@ main section {
 .solution{
     font-size: 2rem;
 }
+
+iframe {
+    border: 1px solid #ddd;
+}

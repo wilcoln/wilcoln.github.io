@@ -1,0 +1,1754 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<link rel="stylesheet" href="./css/site.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+										</td>
+										
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">RedundantThisCheck</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">SuppressionXpathSingleFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+								
+									
+										
+									<tr>
+										<td class="c">SuppressionSingleFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">0</td>
+							<td id="totalBase">0</td>
+							
+								<td id="warningSeverityNumBase">0</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">367</td>
+							<td id="totalPatch">65 (65 added)</td>
+							
+								<td id="warningSeverityStatisticsPatch">65 (65 added)</td>
+							
+						</tr>
+						<tr class="d">
+							<td/>
+							<td id="filesDiff">29 files with differences</td>
+							<td id="totalDiff">65 changes in violations</td>
+							
+								<td id="warningSeverityNumDiff">65 changes in violations</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.coding.RedundantThisCheck</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RedundantThisCheckModuleNumBase">0</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RedundantThisCheckModuleStatisticsPatch">65 (65 added)</td>
+								
+							</tr>
+							<tr class="d">
+								<td>changes in violations</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RedundantThisCheckModuleNumDiff">65</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">65</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/annotation/RequiredParameterForAnnotationCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A1" href = "#A1">#A1</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;requiredParameters&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/annotation/RequiredParameterForAnnotationCheck.java.html#L132">132</a></td>
+								
+								
+									
+									<td class="keepWidth">13</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A2" href = "#A2">#A2</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;annotationName&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/annotation/RequiredParameterForAnnotationCheck.java.html#L159">159</a></td>
+								
+								
+									
+									<td class="keepWidth">40</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A3" href = "#A3">#A3</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;annotationName&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/annotation/RequiredParameterForAnnotationCheck.java.html#L165">165</a></td>
+								
+								
+									
+									<td class="keepWidth">46</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/AvoidDefaultSerializableInInnerClassesCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A4" href = "#A4">#A4</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;allowPartialImplementation&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/AvoidDefaultSerializableInInnerClassesCheck.java.html#L61">61</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/CustomDeclarationOrderCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A5" href = "#A5">#A5</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;format&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/CustomDeclarationOrderCheck.java.html#L1250">1250</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A6" href = "#A6">#A6</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;rule&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/CustomDeclarationOrderCheck.java.html#L1263">1263</a></td>
+								
+								
+									
+									<td class="keepWidth">20</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/ForbidThrowAnonymousExceptionsCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A7" href = "#A7">#A7</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;pattern&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/ForbidThrowAnonymousExceptionsCheck.java.html#L84">84</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/Jsr305AnnotationsCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A8" href = "#A8">#A8</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;fullyQualifiedClassName&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/Jsr305AnnotationsCheck.java.html#L313">313</a></td>
+								
+								
+									
+									<td class="keepWidth">13</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A9" href = "#A9">#A9</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;allowOverridingReturnValue&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/Jsr305AnnotationsCheck.java.html#L400">400</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A10" href = "#A10">#A10</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;allowOverridingParameter&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/Jsr305AnnotationsCheck.java.html#L409">409</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A11" href = "#A11">#A11</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;violationFound&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/Jsr305AnnotationsCheck.java.html#L868">868</a></td>
+								
+								
+									
+									<td class="keepWidth">13</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A12" href = "#A12">#A12</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;annotations&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/Jsr305AnnotationsCheck.java.html#L914">914</a></td>
+								
+								
+									
+									<td class="keepWidth">18</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A13" href = "#A13">#A13</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;annotations&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/Jsr305AnnotationsCheck.java.html#L916">916</a></td>
+								
+								
+									
+									<td class="keepWidth">25</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A14" href = "#A14">#A14</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;annotations&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/Jsr305AnnotationsCheck.java.html#L949">949</a></td>
+								
+								
+									
+									<td class="keepWidth">53</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A15" href = "#A15">#A15</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;annotations&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/Jsr305AnnotationsCheck.java.html#L968">968</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A16" href = "#A16">#A16</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;annotations&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/Jsr305AnnotationsCheck.java.html#L974">974</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/OverridableMethodInConstructorCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A17" href = "#A17">#A17</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;metCallAST&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/coding/OverridableMethodInConstructorCheck.java.html#L929">929</a></td>
+								
+								
+									
+									<td class="keepWidth">13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/naming/UniformEnumConstantNameCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A18" href = "#A18">#A18</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;patterns&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/main/java/com/github/sevntu/checkstyle/checks/naming/UniformEnumConstantNameCheck.java.html#L129">129</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidConstantAsFirstOperandInConditionCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A19" href = "#A19">#A19</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;classField&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidConstantAsFirstOperandInConditionCheck.java.html#L56">56</a></td>
+								
+								
+									
+									<td class="keepWidth">13</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A20" href = "#A20">#A20</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;classField&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidConstantAsFirstOperandInConditionCheck.java.html#L58">58</a></td>
+								
+								
+									
+									<td class="keepWidth">21</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidDefaultSerializableInInnerClassesCheck1.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A21" href = "#A21">#A21</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;field1&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidDefaultSerializableInInnerClassesCheck1.java.html#L12">12</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A22" href = "#A22">#A22</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;field2&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidDefaultSerializableInInnerClassesCheck1.java.html#L13">13</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidHidingCauseExceptionCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A23" href = "#A23">#A23</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;exceptionWrapper&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidHidingCauseExceptionCheck.java.html#L212">212</a></td>
+								
+								
+									
+									<td class="keepWidth">19</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidHidingCauseExceptionCheckWrapping.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A24" href = "#A24">#A24</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;field&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidHidingCauseExceptionCheckWrapping.java.html#L10">10</a></td>
+								
+								
+									
+									<td class="keepWidth">13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidNotShortCircuitOperatorsForBooleanCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A25" href = "#A25">#A25</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;z&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidNotShortCircuitOperatorsForBooleanCheck.java.html#L64">64</a></td>
+								
+								
+									
+									<td class="keepWidth">20</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A26" href = "#A26">#A26</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;z&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidNotShortCircuitOperatorsForBooleanCheck.java.html#L71">71</a></td>
+								
+								
+									
+									<td class="keepWidth">12</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A27" href = "#A27">#A27</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;z&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidNotShortCircuitOperatorsForBooleanCheck.java.html#L79">79</a></td>
+								
+								
+									
+									<td class="keepWidth">12</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A28" href = "#A28">#A28</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;z&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidNotShortCircuitOperatorsForBooleanCheck.java.html#L85">85</a></td>
+								
+								
+									
+									<td class="keepWidth">12</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A29" href = "#A29">#A29</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;z&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidNotShortCircuitOperatorsForBooleanCheck.java.html#L97">97</a></td>
+								
+								
+									
+									<td class="keepWidth">14</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A30" href = "#A30">#A30</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;z&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidNotShortCircuitOperatorsForBooleanCheck.java.html#L101">101</a></td>
+								
+								
+									
+									<td class="keepWidth">14</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A31" href = "#A31">#A31</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;y&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputAvoidNotShortCircuitOperatorsForBooleanCheck.java.html#L131">131</a></td>
+								
+								
+									
+									<td class="keepWidth">21</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputCustomDeclarationOrderCheckGettersSetters.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A32" href = "#A32">#A32</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;field&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputCustomDeclarationOrderCheckGettersSetters.java.html#L11">11</a></td>
+								
+								
+									
+									<td class="keepWidth">16</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputFinalizeImplementationCheckSpecial.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A33" href = "#A33">#A33</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;method&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputFinalizeImplementationCheckSpecial.java.html#L20">20</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputMapIterationInForEachLoopCheckExtendingMap.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A34" href = "#A34">#A34</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;entrySet&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputMapIterationInForEachLoopCheckExtendingMap.java.html#L8">8</a></td>
+								
+								
+									
+									<td class="keepWidth">50</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck12.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A35" href = "#A35">#A35</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;doSmth&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck12.java.html#L31">31</a></td>
+								
+								
+									
+									<td class="keepWidth">14</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck13.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A36" href = "#A36">#A36</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;accept&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck13.java.html#L27">27</a></td>
+								
+								
+									
+									<td class="keepWidth">13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck14.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A37" href = "#A37">#A37</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;doSmth&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck14.java.html#L61">61</a></td>
+								
+								
+									
+									<td class="keepWidth">13</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A38" href = "#A38">#A38</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;doSmth2&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck14.java.html#L63">63</a></td>
+								
+								
+									
+									<td class="keepWidth">13</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A39" href = "#A39">#A39</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;doSmth&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck14.java.html#L78">78</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A40" href = "#A40">#A40</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;doSmth2&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck14.java.html#L81">81</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck15.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A41" href = "#A41">#A41</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;toString&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck15.java.html#L13">13</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck2.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A42" href = "#A42">#A42</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;toString&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck2.java.html#L12">12</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck23.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A43" href = "#A43">#A43</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;associations&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck23.java.html#L22">22</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A44" href = "#A44">#A44</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;associations&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck23.java.html#L23">23</a></td>
+								
+								
+									
+									<td class="keepWidth">21</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A45" href = "#A45">#A45</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;associations&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck23.java.html#L24">24</a></td>
+								
+								
+									
+									<td class="keepWidth">25</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck27.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A46" href = "#A46">#A46</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;toString&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck27.java.html#L16">16</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck4.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A47" href = "#A47">#A47</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;overrideMe&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck4.java.html#L10">10</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A48" href = "#A48">#A48</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;toString&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck4.java.html#L12">12</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck5.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A49" href = "#A49">#A49</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;overrideMe&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck5.java.html#L10">10</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A50" href = "#A50">#A50</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;toString&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck5.java.html#L13">13</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A51" href = "#A51">#A51</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;toString&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck5.java.html#L26">26</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A52" href = "#A52">#A52</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;toString&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputOverridableMethodInConstructorCheck5.java.html#L54">54</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputSimpleAccessorNameNotationCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A53" href = "#A53">#A53</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;mFirst&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputSimpleAccessorNameNotationCheck.java.html#L11">11</a></td>
+								
+								
+									
+									<td class="keepWidth">24</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A54" href = "#A54">#A54</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;mSecond&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputSimpleAccessorNameNotationCheck.java.html#L14">14</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A55" href = "#A55">#A55</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;preB&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputSimpleAccessorNameNotationCheck.java.html#L26">26</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A56" href = "#A56">#A56</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;object&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputSimpleAccessorNameNotationCheck.java.html#L65">65</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputSimpleAccessorNameNotationCheck1.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A57" href = "#A57">#A57</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;field1&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputSimpleAccessorNameNotationCheck1.java.html#L9">9</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A58" href = "#A58">#A58</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;field1&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/coding/InputSimpleAccessorNameNotationCheck1.java.html#L14">14</a></td>
+								
+								
+									
+									<td class="keepWidth">16</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/design/InputAvoidConditionInversionCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A59" href = "#A59">#A59</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;flag&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/design/InputAvoidConditionInversionCheck.java.html#L98">98</a></td>
+								
+								
+									
+									<td class="keepWidth">23</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/design/InputHideUtilityClassConstructorCheck5.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A60" href = "#A60">#A60</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;setPreferredSize&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/design/InputHideUtilityClassConstructorCheck5.java.html#L14">14</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/design/InputStaticMethodCandidateCheck.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A61" href = "#A61">#A61</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;classField&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/design/InputStaticMethodCandidateCheck.java.html#L17">17</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A62" href = "#A62">#A62</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;nestedFoo3&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/design/InputStaticMethodCandidateCheck.java.html#L69">69</a></td>
+								
+								
+									
+									<td class="keepWidth">36</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A63" href = "#A63">#A63</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;run&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/design/InputStaticMethodCandidateCheck.java.html#L129">129</a></td>
+								
+								
+									
+									<td class="keepWidth">44</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A64" href = "#A64">#A64</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;test&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/design/InputStaticMethodCandidateCheck.java.html#L196">196</a></td>
+								
+								
+									
+									<td class="keepWidth">34</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A65" href = "#A65">#A65</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;hashCode&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/sevntu-checkstyle/sevntu-checks/src/test/resources/com/github/sevntu/checkstyle/checks/design/InputStaticMethodCandidateCheck.java.html#L267">267</a></td>
+								
+								
+									
+									<td class="keepWidth">9</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

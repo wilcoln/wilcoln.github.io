@@ -1,0 +1,1094 @@
+<html>
+	<head>
+		<title>checkstyle xml difference report</title>
+		<style type="text/css" media="all">@import url("./css/maven-base.css");@import url("./css/maven-theme.css"); );</style>
+		<link rel="stylesheet" href="./css/site.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<http-equiv http-equiv="Content-Language" content="en"></http-equiv>
+	</head>
+	<body class="composite">
+		<div id="contentBox">
+			<div class="section">
+				<h2 a="Checkstyle XML difference report">Checkstyle XML difference report</h2>
+				This is symmetric difference generated from two checkstyle-result.xml reports. <br/>
+				All matching records from each XML file are deleted, then remaining records are merged into single report. <br>
+		        <a href="https://github.com/checkstyle/contribution/tree/master/patch-diff-report-tool">Utility that generated this report.</a>
+			</div>
+
+			
+				<h2 a="Checkstyle configuration report">Checkstyle configuration report</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Module Name</th>
+								<th>Base properties</th>
+								<th>Patch properties</th>
+							</tr>
+							
+								
+									<tr>
+										<td class="c">Checker</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												severity
+												
+													<li>warning</li>
+												
+												<br/>
+											
+												charset
+												
+													<li>UTF-8</li>
+												
+												<br/>
+											
+												haltOnException
+												
+													<li>false</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">BeforeExecutionExclusionFileFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												fileNamePattern
+												
+													<li>module\-info\.java$</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">TreeWalker</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+										</td>
+										
+										
+									</tr>
+									
+										
+									<tr>
+										<td class="c">RedundantThisCheck</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+										
+									<tr>
+										<td class="c">SuppressionXpathSingleFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												message
+												
+													<li>Javadoc comment at column \d+ has parse error</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+								
+									
+										
+									<tr>
+										<td class="c">SuppressionSingleFilter</td>
+										
+										
+										<td> </td>
+										<td class="a">
+											
+												checks
+												
+													<li>Checker</li>
+												
+												<br/>
+											
+												message
+												
+													<li>Exception occurred while parsing</li>
+												
+												<br/>
+											
+										</td>
+										
+										
+									</tr>
+									
+								
+									
+								
+								
+					</table>	
+				</div>
+			
+
+			<div class="section">
+				<h2 a="Summary:">Summary:</h2>
+				<div class="section">
+					<table border="0" class="bodyTable">
+						<tr class="a">
+							<th>Report id</th>
+							<th>Files</th>
+							<th>Violations</th>
+							
+								<th>Severity-warning</th>
+							
+						</tr>
+						<tr class="b">
+							<td>base</td>
+							<td id="filesBase">0</td>
+							<td id="totalBase">0</td>
+							
+								<td id="warningSeverityNumBase">0</td>
+							
+						</tr>
+						<tr class="a">
+							<td>patch</td>
+							<td id="filesPatch">30</td>
+							<td id="totalPatch">41 (41 added)</td>
+							
+								<td id="warningSeverityStatisticsPatch">41 (41 added)</td>
+							
+						</tr>
+						<tr class="d">
+							<td/>
+							<td id="filesDiff">11 files with differences</td>
+							<td id="totalDiff">41 changes in violations</td>
+							
+								<td id="warningSeverityNumDiff">41 changes in violations</td>
+							
+						<tr>
+					</table>
+
+					
+						<br />
+						<table border="0" class="bodyTable">
+							<tr class="a">
+								<th>Report id</th>
+								
+									<th>com.puppycrawl.tools.checkstyle.checks.coding.RedundantThisCheck</th>
+								
+							</tr>
+							<tr class="b">
+								<td>base</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RedundantThisCheckModuleNumBase">0</td>
+								
+							</tr>
+							<tr class="a">
+								<td>patch</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RedundantThisCheckModuleStatisticsPatch">41 (41 added)</td>
+								
+							</tr>
+							<tr class="d">
+								<td>changes in violations</td>
+								
+									<td id="com.puppycrawl.tools.checkstyle.checks.coding.RedundantThisCheckModuleNumDiff">41</td>
+								
+							<tr>
+						</table>
+					
+
+					<br />
+					Number of unique base messages reported below: <span id="uniqueMessagesBase">0</span><br />
+					Number of unique patch messages reported below: <span id="uniqueMessagesPatch">41</span><br />
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 a="Violations:">Violations:</h2>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Button.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A1" href = "#A1">#A1</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Button.java.html#L145">145</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A2" href = "#A2">#A2</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Button.java.html#L146">146</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A3" href = "#A3">#A3</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Button.java.html#L147">147</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A4" href = "#A4">#A4</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Button.java.html#L161">161</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A5" href = "#A5">#A5</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;rippleSpeed&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Button.java.html#L182">182</a></td>
+								
+								
+									
+									<td class="keepWidth">24</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Card.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A6" href = "#A6">#A6</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Card.java.html#L55">55</a></td>
+								
+								
+									
+									<td class="keepWidth">52</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A7" href = "#A7">#A7</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Card.java.html#L61">61</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/CheckBox.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A8" href = "#A8">#A8</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/CheckBox.java.html#L144">144</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A9" href = "#A9">#A9</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/CheckBox.java.html#L145">145</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A10" href = "#A10">#A10</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/CheckBox.java.html#L146">146</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A11" href = "#A11">#A11</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;getWidth&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/CheckBox.java.html#L225">225</a></td>
+								
+								
+									
+									<td class="keepWidth">51</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A12" href = "#A12">#A12</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;getHeight&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/CheckBox.java.html#L225">225</a></td>
+								
+								
+									
+									<td class="keepWidth">72</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/LayoutRipple.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A13" href = "#A13">#A13</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/LayoutRipple.java.html#L46">46</a></td>
+								
+								
+									
+									<td class="keepWidth">52</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A14" href = "#A14">#A14</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/LayoutRipple.java.html#L69">69</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A15" href = "#A15">#A15</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/LayoutRipple.java.html#L177">177</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A16" href = "#A16">#A16</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/LayoutRipple.java.html#L178">178</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A17" href = "#A17">#A17</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/LayoutRipple.java.html#L179">179</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/ProgressBarCircularIndeterminate.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A18" href = "#A18">#A18</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/ProgressBarCircularIndeterminate.java.html#L59">59</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A19" href = "#A19">#A19</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/ProgressBarCircularIndeterminate.java.html#L60">60</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A20" href = "#A20">#A20</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/ProgressBarCircularIndeterminate.java.html#L61">61</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A21" href = "#A21">#A21</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/ProgressBarCircularIndeterminate.java.html#L168">168</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/ProgressBarDeterminate.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A22" href = "#A22">#A22</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/ProgressBarDeterminate.java.html#L78">78</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A23" href = "#A23">#A23</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/ProgressBarDeterminate.java.html#L79">79</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A24" href = "#A24">#A24</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/ProgressBarDeterminate.java.html#L80">80</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A25" href = "#A25">#A25</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/ProgressBarDeterminate.java.html#L128">128</a></td>
+								
+								
+									
+									<td class="keepWidth">17</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Slider.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A26" href = "#A26">#A26</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Slider.java.html#L220">220</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A27" href = "#A27">#A27</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Slider.java.html#L221">221</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A28" href = "#A28">#A28</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Slider.java.html#L222">222</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A29" href = "#A29">#A29</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;findViewById&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Slider.java.html#L347">347</a></td>
+								
+								
+									
+									<td class="keepWidth">67</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A30" href = "#A30">#A30</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Method call to &#39;getContext&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Slider.java.html#L349">349</a></td>
+								
+								
+									
+									<td class="keepWidth">51</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Switch.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A31" href = "#A31">#A31</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Switch.java.html#L165">165</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A32" href = "#A32">#A32</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Switch.java.html#L166">166</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A33" href = "#A33">#A33</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;backgroundColor&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/views/Switch.java.html#L167">167</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/widgets/ColorSelector.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A34" href = "#A34">#A34</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;color&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/widgets/ColorSelector.java.html#L90">90</a></td>
+								
+								
+									
+									<td class="keepWidth">22</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A35" href = "#A35">#A35</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;color&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/widgets/ColorSelector.java.html#L91">91</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A36" href = "#A36">#A36</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;color&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/widgets/ColorSelector.java.html#L92">92</a></td>
+								
+								
+									
+									<td class="keepWidth">26</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/widgets/Dialog.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A37" href = "#A37">#A37</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;titleTextView&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/widgets/Dialog.java.html#L64">64</a></td>
+								
+								
+									
+									<td class="keepWidth">13</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A38" href = "#A38">#A38</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;messageTextView&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/widgets/Dialog.java.html#L67">67</a></td>
+								
+								
+									
+									<td class="keepWidth">13</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A39" href = "#A39">#A39</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;buttonAccept&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/widgets/Dialog.java.html#L70">70</a></td>
+								
+								
+									
+									<td class="keepWidth">13</td>
+								
+							</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A40" href = "#A40">#A40</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;buttonCancel&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/widgets/Dialog.java.html#L79">79</a></td>
+								
+								
+									
+									<td class="keepWidth">13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+				<div class="section">
+					<h3>/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/widgets/ProgressDialog.java</h3>
+					<tr class="b">
+					<table border="0" class="bodyTable">
+					        <th></th>
+							<th>Severity</th>
+							<th>Rule</th>
+							<th>Message</th>
+							<th>Line</th>
+							<th>Col</th>
+						</tr>
+						
+							
+								<tr class="a">
+							
+								<td class="keepWidth"><a name="A41" href = "#A41">#A41</a></td>
+								<td>warning</td>
+								<td>RedundantThis</td>
+								<td>Reference to instance variable &#39;titleTextView&#39; does not need &quot;this&quot;.</td>
+								
+									
+									<td class="keepWidth"><a href = "xref/home/wilcoln/Workspace/Projects/contribution/checkstyle-tester/repositories/MaterialDesignLibrary/MaterialDesign/src/com/gc/materialdesign/widgets/ProgressDialog.java.html#L64">64</a></td>
+								
+								
+									
+									<td class="keepWidth">13</td>
+								
+							</tr>
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

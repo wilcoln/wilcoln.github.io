@@ -13636,12 +13636,9 @@ main #my-skills button {
 }
 
 main #my-resume {
-  min-height: 125vh;
-  height: 70rem;
   background-color: #f0f0f0;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 70% 90%, 50% 100%, 30% 90%, 0% 90%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 70% 90%, 50% 100%, 30% 90%, 0% 90%);
   font-size: 1.6rem;
+  border-bottom: 2px solid #79df7d;
 }
 main #my-resume h2 {
   font-size: 2rem;

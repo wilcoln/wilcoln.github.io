@@ -1,547 +1,274 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Wilfried L. Bounsi</title>
-    <!-- Icons  -->
-    <link rel="stylesheet" href="css/linea-icons.css">
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/app.css">
-</head>
-<body style="">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="text-shadow: rgba(0, 0, 0, 0.5) 0px 0.1rem 1rem; background: none; animation: 0s ease 0s 1 normal none running none; border-bottom: none; box-shadow: none;">
-        <div class="container">
-            <a  href="index.html" class="navbar-brand">
-                <div class="logo">
-                    Wilfried L. Bounsi
-                </div>
-            </a>
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-nav">
-                <i class="navbar-toggler-icon"></i>
-            </button>
-            <div id="navbar-nav" class="collapse navbar-collapse">
-                <ul class="ml-auto navbar-nav text-uppercase">
-                    <li class="nav-item ml-4">
-                        <a href="#about-me" class="nav-link">About Me</a>
-                    </li>
-                    <li class="nav-item ml-4">
-                        <a href="#my-skills" class="nav-link">Skills</a>
-                    </li>
-                    <li class="nav-item ml-4">
-                        <a href="#my-resume" class="nav-link">Resume</a>
-                    </li>
-                    <li class="nav-item ml-4">
-                        <a href="#my-portfolio" class="nav-link">Portfolio</a>
-                    </li>
-                    <li class="nav-item ml-4">
-                        <a href="#contact-me" class="nav-link">Contact Me</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>        <main style="background: url(&quot;img/design-miax.jpg&quot;) 0% 0% / cover fixed;">
-        <header class="header">
-            <div class="container">
-                <div class="row align-items-center d-flex">
-                    <div class="col-lg-7">
-                        <div class="d-flex align-items-center avail-info">
-                            <i class="display-4 icon icon-basic-lightbulb"></i>&nbsp;&nbsp;
-                            <strong>Welcome! Thanks for coming.</strong>
-                        </div>
-                        <h1 class="description mt-4 mb-5 text-md-left">
-                            I, Wilfried, <span class="fa fa-heart text-danger"></span> tech and <span class="fa fa-pencil text-success"> </span> code  <span class="text-warning">(almost)</span> all the time.
-                        </h1>
-                    </div>
-                </div>
-                <hr class="mb-5">
-                
-                <div class="d-none d-sm-block row mt-5 mb-5 text-uppercase  text-center">
-                    <div class="col">
-                        <strong class="skills">
-                            Engineering Student
-                            <span>&nbsp; - &nbsp;</span> Data Scientist
-                            <span>&nbsp; - &nbsp;</span> Software engineer
-                            <span>&nbsp; - &nbsp;</span> Open Source Enthusiast
-                        </strong>
-
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-6 col-lg-3 col-xs-12 m-auto">
-                        <a href="#contact-me"><button class="btn btn-primary btn-block btn-lg my-5 header__btn">Reach me !</button></a> 
-                    </div>
-                </div>
-            </div>
-        </header>
-        <section id="about-me">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col">
-                        <h1 class="px-5 pb-4 d-inline-block">About Me</h1>
-                        <span class="heading-bottom"></span>
-                    </div>
-                </div>
-                <div class="row mt-5 align-items-center">
-                    <div class="col-lg-4">
-                        <img class="img-fluid" src="img/me_nb.jpeg" alt="Wilfried L. Bounsi">
-                    </div>
-                    <div class="col-lg-7 ml-auto">
-                        <div class="row">
-                            <div class="col">
-                                <blockquote class="blockquote mb-5">
-                                    <p class="blockquote about-me__text">
-                                        <i class="fa fa-quote-left"></i>&nbsp;
-                                        I am a Cameroonian young male who lives in Toulouse.
-                                        I have a passion for software engineering and applied mathematics.
-
-                                        More precisely, I am interested in the field of Data Science, in which I want to pursue a PhD and build my career.
-                                        I am currently studying at <a href="http://enseeiht.fr">Toulouse INP - ENSEEIHT</a>.&nbsp;<i class="fa fa-quote-right"></i>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Wilfried L. Bounsi</title>
+        <!-- Icons  -->
+        <link rel="stylesheet" href="css/linea-icons.css">
+        <!-- Styles -->
+        <link rel="stylesheet" href="css/deps.css">
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>      
+        <main>
+            <aside class="col-md-3 px-0 fixed-top d-none d-md-block">
+                <h1>Wilfried L. Bounsi</h1>
+                <img id="me" class="my-4 img-fluid" src="img/me_nb.png" alt="Wilfried L. Bounsi">
+                <br>
+                <br>
+                <nav>
+                    <ul class="ml-auto navbar-nav text-uppercase">
+                        <li class="nav-item ml-4">
+                            <a href="#about-me" class="nav-link">About Me</a>
+                        </li>
+                        <li class="nav-item ml-4">
+                            <a href="#education" class="nav-link">Education</a>
+                        </li>
+                        <li class="nav-item ml-4">
+                            <a href="#work-exp" class="nav-link">Work Experience</a>
+                        </li>
+                        <li class="nav-item ml-4">
+                            <a href="#portfolio" class="nav-link">Porfolio</a>
+                        </li>
+                    </ul>
+                </nav>
+                <br>
+                <div class="media-links">
+                    <ul class="list-unstyled d-inline">
+                          <li class="media-link media-link__twitter d-inline-block"><a href="https://twitter.com/wilcoln_"> <i class="fa fa-twitter"> </i></a></li>
+                          <li class="media-link media-link__facebook d-inline-block"><a href="https://web.facebook.com/wilcolnB"> <i class="fa fa-facebook"> </i></a></li>
+                          <li class=" media-link media-link__linkedin d-inline-block"><a href="https://www.linkedin.com/in/wilcoln"> <i class="fa fa-linkedin"> </i></a></li>
+                        <li class="media-link media-link__github d-inline-block"><a href="https://www.github.com/wilcoln"> <i class="fa fa-github"> </i></a></li>
+                    </ul>
+                    <address class="row mt-5">
+                      <p class="m-auto text-center">
+                     <i class="fa fa-envelope"></i> &nbsp; wilfried.bounsi [at] cs.ox.ac.uk<br><br>
+                      <i class="fa fa-map-marker"></i> &nbsp;  Oxford, United Kingdom
+                          <br><br>
+                      </p>
+                      
+                    </address>
+                  </div>
+            </aside>
+            <div class="col-md-9 ml-auto px-0">
+                    <section id="about-me">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2 id="about-me">About Me</h2>
+                                    <p>
+                                        I am an <a href="http://www.cs.ox.ac.uk/admissions/graduate/msc-computer-science/">MSc in Advanced Computer Science</a> at the <a href="https://ox.ac.uk">University of Oxford</a>. I previously obtained my MEng. in Computer Science and Applied Mathematics at <a href="http://enseeiht.fr">Toulouse INP - ENSEEIHT</a>, where I majored in High Performance Computing and Big Data.
                                     </p>
-                                    <footer class="blockquote-footer text-right"> Wilfried L.
-                                        Bounsi
-                                    </footer>
-                                </blockquote>
-                                <div class="row mt-4">
-                                    <div class="col-sm-4 ml-auto">
-                                        <button data-toggle="collapse" data-target="#more-about-me" class="btn btn-outline-success btn-block btn-lg">Learn more</button>
-                                    </div>
-                                </div>
-                                <div id="more-about-me" class="collapse mt-4 mb-0">
-                                    <div class="card">
-                                        <div class="card-body">
-                                           <div class="row align-items-center">
-                                               <div class="col-2 text-center">
-                                                    <i class="display-4 icon icon-basic-gunsight"></i>&nbsp;&nbsp;
-                                               </div>
-                                               <div class="col-10">
-                                                    <p class="text-justify">
-                                                        My goal is to bring a world wide significant contribution to computer science.
+                                    
 
-                                                    </p>
-                                               </div>
-                                           </div>
+                                    <p>
+                                        My research interests lie in the fields of Machine Learning and Natural Language Processing, in which I want to pursue a PhD and build my career.
+                                    </p>
+                                    
+                                    <p>
+                                        I'm currently a part-time researcher at the <a href="https://oxai.org/">Oxford Artificial Intelligence Society</a>, where I have the chance to be part of a team of passionate and talented young researchers, investigating biases in large-scale generative language models.
+                                    </p>
+                                    <p>
+                                        Additionally, I am a Co-Founder of <a href="https://quidely.com">Quidely</a> and <a href="https://skylon.org">Skylon</a>.
+                                    </p>
+                                    <p>[<a href="res/CV_en.pdf" download> My Resume</a> ]</p>                       
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="my-resume">
+                        <div class="container">
+                            <div class="row">
                                             
-                                            <!-- 
-                                                <hr>
-                                                <div class="row align-items-center">
-                                                <div class="col-2 text-center">
-                                                    <i class="display-4 icon icon-basic-pin2"></i>&nbsp;&nbsp;
-                                                </div>
-                                                <div class="col-10">
-                                                    <p class="text-justify">
-                                                        I am mostly interested in the field of artificial intelligence and data sciences in which I want to build my career.
-                                                    </p>
-                                                </div>
-                                            </div> -->
-                                            <hr> 
-                                            <div class="row align-items-center">
-                                                <div class="col-2 text-center">
-                                                    <i class="display-4 icon icon-basic-heart"></i>&nbsp;&nbsp;
-                                                </div>
-                                                <div class="col-10">
-                                                    <p class="text-justify">
-                                                        Some of my hobbies are mangas, music, football and contributing to open source projects.
-                                                    </p>
-                                                </div>
+                                <div class="col-12">
+                                    <h2 id="education">Education</h2>
+                                        <h3>University of Oxford</h3>
+                                        <ul>
+                                            <li>MSc in Advanced Computer Science</li>
+                                            <li>Relevant coursework: Computational Learning Theory, Quantum Processes and Computation, Advanced Topics in Machine Learning</li>
+                                        </ul>
+                                        <h3>Toulouse INP - ENSEEIHT <span class="float-right">2019 - 2021</span></h3>
+                                        <ul>
+                                            <li>MEng in Computer Science and Applied Mathematics, majored in High Performance Computing and Big Data</li>
+                                            <li>Relevant coursework: Software Engineering, Compilation, Graph Theory, Numerical Optimisation, Probabilities and statistics, Machine Learning.</li>
+                                        </ul>
+            
+                                        <h3>University of Burgundy <span class="float-right">2018 -  2019</span></h3>
+                                        <ul>
+                                            <li>3rd year Bachelor equivalent in Computer Science and Electrical Engineering, ranked 1st over 84 students, Head of Batch.</li>
+                                            <li>Relevant coursework: C/C++/Java Programming, Image/Signal Processing.</li>
+                                        </ul>
+            
+                                        <h3>National Advanced School of Engineering of Yaoundé <span class="float-right">2015  -  2018</span></h3>
+                                        
+                                        <ul>
+                                            <li>Ranked 16th (200 Selected) over 5000+ at the entrance examination contest.</li>
+                                            <li>1st, 2nd and 3rd Year Bachelor equivalent, ranked in the top 5% of the Batch.</li>
+                                            <li>
+                                            Relevant Coursework: General/Linear Algebra, 
+                                            Multidimensional analysis, Advanced Calculus, 
+                                            Probabilities and Statistics, C Programming,
+                                            Numerical Analysis, Data structures and Algorithms, Java SE/EE Programming, Software Engineering.
+                                            </li>
+                                        </ul>
+                                </div>
+
+                                <div class="col-12">
+                                    <h2 id="work-exp">Work Experience</h2>
+                                        <h3>Professorbob.ai - NLP Data Scientist and Backend Engineer <span class="float-right">2020 - 2021</span></h3>
+                                        <h3>Group Pro BTP - Data Scientist Intern <span class="float-right">2020</span></h3>
+                                        <ul>
+                                            <li>Worked on Anomaly detection in time series of financial data</li>
+                                        </ul>
+                                        <h3>Laboratoire de Recherche en Informatique de Toulouse - Intern <span class="float-right">2019 - 2020</span></h3>
+                                        <ul>
+                                            <li>Part-time, research intern in the Sepia team, working on adapting IO and CPU Usage in a Hadoop infrastructure.</li>
+                                            <li>Involves java programming, bash scripting, benchmarking, statistical analysis.</li>
+                                        </ul>
+            
+                                        <h3>Web Development -  Freelance <span class="float-right">2018 - 2019</span></h3>
+                                        <ul>
+                                            <li>Co-design/development of a crowdfunding platform based in Cameroon.</li>
+                                            <li>Design and development of the website of the centralien study support group based in Cameroon.</li>
+                                        </ul>
+            
+                                        <h3>Polytech Valor, Cameroon - Intern <span class="float-right">2016 - 2018</span></h3>
+                                        <ul>
+                                            <li>Co-development of the web site of Algeria embassy in Cameroon</li>
+                                            <li>Teaching Assistant during the 2017 edition of the IT security training sponsored by the government,
+                                            In charge of both password security and phishing workshops.</li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2 id="portfolio">Portfolio</h2>
+                                    <div class="card-columns">
+                                        <div class="card h-100">
+                                            <a href="#"><img class="card-img-top" src="img/klazor.png" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    <a href="https://github.com/wilcoln/klazor">Klazor</a>
+                                                </h4>
+                                                <p class="card-text">
+                                                Klazor is a web application for note taking and online storage, I like to think of it as my binder. Built with Python/Django. 
+                                                </p>
+                                                <span class="badge badge-primary">personal</span>
                                             </div>
                                         </div>
+                
+                
+                                        <div class="card h-100">
+                                            <a href="#"><img class="card-img-top" src="img/wifibot.png" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    <a href="https://github.com/wilcoln/wifibot">Wifibot</a>
+                                                </h4>
+                                                <p class="card-text">
+                                                Remote control and monitoring application for a 4-wheel robot with a camera, via the wifi network, built with C++/QT.
+                                                </p>
+                                                <span class="badge badge-secondary">academic</span>
+                                            </div>
+                                        </div>
+                
+                                        <div class="card h-100">
+                                            <a href="#"><img class="card-img-top" src="img/checkstyle.png" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    <a href="https://github.com/checkstyle/checkstyle">Checkstyle</a>
+                                                </h4>
+                                                <p class="card-text">
+                                                Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard.
+                                                </p>
+                                                <span class="badge badge-warning">open source</span>
+                                            </div>
+                                        </div>
+                
+                                        <div class="card h-100">
+                                            <a href="#"><img class="card-img-top" src="img/ant.png" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    <a href="https://github.com/wilcoln/ant-simulation">AntSimulation</a>
+                                                </h4>
+                                                <p class="card-text">
+                                                Numerical simulation of colonies of social insects and more specifically that of anthills, built with Java/JavaFX.
+                                                </p>
+                                                <span class="badge badge-primary">personal</span>
+                                            </div>
+                                        </div>
+                
+                
+                                        <div class="card h-100">
+                                            <a href="#"><img class="card-img-top" src="img/terrain.png" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    <a href="https://github.com/wilcoln/tdg-gen">Tower Defense Game Generator</a>
+                                                </h4>
+                                                <p class="card-text">
+                                                    A Tower defense game generator built with Java/Swing.
+                                                </p>
+                                                <span class="badge badge-secondary">academic</span>
+                                            </div>
+                                        </div>
+                
+                                        <div class="card h-100">
+                                            <a href="#"><img class="card-img-top" src="img/hidoop.png" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    <a href="https://github.com/wilcoln/hidoop">Hidoop</a>
+                                                </h4>
+                                                <p class="card-text">
+                                                    A simplified clone of the famous Apache Hadoop.
+                                                </p>
+                                                <span class="badge badge-secondary">academic</span>
+                                            </div>
+                                        </div>
+                
+                                        <div class="card h-100">
+                                            <a href="#"><img class="card-img-top" src="img/centralien.png" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    <a href="http://centralien.org">Centralien Website</a>
+                                                </h4>
+                                                <p class="card-text">
+                                                    Design and development of the website of the centralien study support group based in Cameroon. Built with Laravel & Vuejs
+                                                </p>
+                                                <span class="badge badge-success">freelance</span>
+                                            </div>
+                                        </div>
+                
+                                        <div class="card h-100">
+                                            <a href="#"><img class="card-img-top" src="img/ambassade.png" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    <a href="http://www.ambassade-algerie-cameroun.org/">Website of Algeria Embassy</a>
+                                                </h4>
+                                                <p class="card-text">
+                                                    Co-development of the web site of Algeria embassy in Cameroon.
+                                                </p>
+                                                <span class="badge badge-danger">internship</span>
+                                            </div>
+                                        </div>
+                
+                                    
                                     </div>
                                 </div>
                             </div>
-
+                
                         </div>
-
-                    </div>
-                </div>
+                    </section>
+                    <footer>
+                        Made with <i class="fa fa-heart text-danger"></i> by wilcoln<br>
+                        © Copyright 2021 <br><br>
+                    </footer>
             </div>
-        </section>
-        <section id="my-skills">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col">
-                        <h1 class="px-5 pb-4 d-inline-block">My Skills</h1>
-                        <span class="heading-bottom"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 my-skills-verbose" style="animation: 1.5s ease-out 0s 1 normal none running moveInRightSoft; visibility: visible;">
-                        <div class="row">
-                            <p class="col text-justify">
-                                I'm a polyglot programmer, with fullstack competency, I can professionnally handle Web/Mobile projects. 
-                                I prefer working with Django and Vuejs when it comes to web development.
-                                As a Java programmer I'm able to design nice desktop GUI applications with the JavaFX framework.
-                                I often do some C and C++ but occasions are pretty rare.
-                                I'm a great fan of AI because of all the "magic" it's capable of. 
-                                I study software engineering and applied mathematics at school
-                            and also do a lot of online courses during my spare time,  you can check more details below. I'm constantly learning, trying to improve my existing skills
-                                and aiming to develop new ones, it is safe to say that I'll never be satiated.
-                            </p>
-                        </div>
-                        <div class="row my-5">
-                            <div class="col-sm-6 m-auto">
-                                <a href="#contact-me" class="btn btn-outline-primary btn-block btn-lg">contact me</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 px-5 my-skills-progress" style="animation: 1.5s ease-out 0s 1 normal none running moveInLeftSoft; visibility: visible;">
-                        <h2>Python</h2>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 60%;">90%</div>
-                        </div>
-                        <h2>Matlab/Octave</h2>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 60%;">70%</div>
-                        </div>
-                        <h2>Java</h2>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%;">90%</div>
-                        </div>
-                        <h2>C/C++</h2>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 70%;">70%</div>
-                        </div>
-                        <h2>OCaml</h2>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 70%;">70%</div>
-                        </div>
-                    </div>
-                     <div class="col-md-4 px-5 my-skills-progress" style="animation: 1.5s ease-out 0s 1 normal none running moveInLeftSoft; visibility: visible;">
-                        <h2>HTML/CSS</h2>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%;">90%</div>
-                        </div>
-                        <h2>Javascript</h2>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 80%;">80%</div>
-                        </div>
-                        <h2>PHP</h2>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 80%;">80%</div>
-                        </div>
-                        <h2>MYSQL</h2>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 80%;">80%</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="my-resume">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col">
-                        <h1 class="px-5 pb-4 d-inline-block">My Resume</h1>
-                        <span class="heading-bottom"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Basic Details</h2>
-                        <ul>
-                            <li>Full name: Wilfried Lincoln Bounsi Djatcheu 
-                                <i
-                                title="Actually, the right ordering is 'Bounsi Djatcheu Wilfried Lincoln'. Last names come first in my country."
-                                class="fa fa-info-circle text-muted"> </i>
-                            </li>
-                            <li>IRC nick: wilcoln  <i
-                                title="Fun fact, some people call me that in real life too"
-                                class="fa fa-info-circle text-muted"> </i></li>
-                            <li>Email: wilcoln99 [at] gmail.com</li>
-                            <li>Profiles: <a href="https://github.com/wilcoln">Github</a> , <a href="https://www.linkedin.com/in/wilcoln/">Linkedin</a> </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-12">
-                        <h2>Professional experience</h2>
-                            <h3>Laboratoire de Recherche en Informatique de Toulouse - Intern <span class="float-right">2019 - Now</span></h3>
-                            <ul>
-                                <li>Part-time, research intern in the Sepia team, working on adapting IO and CPU Usage in a Hadoop infrastructure.</li>
-                                <li>Involves java programming, bash scripting, benchmarking, statistical analysis.</li>
-                            </ul>
-
-                            <h3>Web Development -  Freelance <span class="float-right">2018 - 2019</span></h3>
-                            <ul>
-                                <li>Co-design/development of a crowdfunding platform based in Cameroon.</li>
-                                <li>Design and development of the website of the centralien study support group based in Cameroon.</li>
-                            </ul>
-
-                            <h3>Polytech Valor, Cameroon - Intern <span class="float-right">2016 - 2018</span></h3>
-                            <ul>
-                                <li>Co-development of the web site of Algeria embassy in Cameroon</li>
-                                <li>Teaching Assistant during the 2017 edition of the IT security training sponsored by the government,
-                                In charge of both password security and phishing workshops.</li>
-                            </ul>
-                    </div>
-
-                    <div class="col-12">
-                        <h2>Education</h2>
-                            <h3>Toulouse INP - ENSEEIHT, Computer Science Engineering <span class="float-right">2019 - Now</span></h3>
-                            <ul>
-                                <li>1st year Master’s degree, majoring in High Performance Computing and Big Data</li>
-                                <li>Relevant coursework: Software Engineering, Compilation, Graph Theory, Numerical Optimisation, Probabilities and statistics, Machine Learning.</li>
-                            </ul>
-
-                            <h3>University of Burgundy, Computer Science Engineering <span class="float-right">2018 -  2019</span></h3>
-                            <ul>
-                                <li>3rd year Bachelor equivalent, ranked 1st over 84 students, Head of Batch.</li>
-                                <li>Relevant coursework: C/C++/Java Programming, Image/Signal Processing.</li>
-                            </ul>
-
-                            <h3>National Advanced School of Engineering of Yaoundé <span class="float-right">2015  -  2018</span></h3>
-                            
-                            <ul>
-                                <li>Ranked 16th over 5000+ at the entrance competition, top 0.32% of applicants.</li>
-                                <li>1st, 2nd and 3rd Year Bachelor equivalent, ranked in the top 5.5% of the Batch.</li>
-                                <li>
-                                Relevant Coursework: General/Linear Algebra, 
-                                Multidimensional analysis, Advanced Calculus, 
-                                Probabilities and Statistics, C Programming,
-                                Numerical Analysis, Data structures and Algorithms, Java SE/EE Programming, Software Engineering.
-                                </li>
-                            </ul>
-                    </div>
-                </div>
-
-                <div class="download-cv row text-center">
-                    <div class="col">
-                        <a href="res/CV_en.pdf" download> Download full PDF version</a> 
-                    </div>
-                </div>
-            </div>
-        </section>        
-
-        <section id="my-portfolio">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col">
-                        <h1 class="px-5 pb-4 d-inline-block">Portfolio</h1>
-                        <span class="heading-bottom"></span>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card-columns">
-                            <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="img/klazor.png" alt=""></a>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="https://github.com/wilcoln/klazor">Klazor</a>
-                                    </h4>
-                                    <p class="card-text">
-                                    Klazor is a web application for note taking and online storage, I like to think of it as my binder. Built with Python/Django. 
-                                    </p>
-                                    <span class="badge badge-primary">personal</span>
-                                </div>
-                            </div>
-
-
-                             <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="img/wifibot.png" alt=""></a>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="https://github.com/wilcoln/wifibot">Wifibot</a>
-                                    </h4>
-                                    <p class="card-text">
-                                    Remote control and monitoring application for a 4-wheel robot with a camera, via the wifi network, built with C++/QT.
-                                    </p>
-                                    <span class="badge badge-secondary">academic</span>
-                                </div>
-                            </div>
-
-                            <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="img/checkstyle.png" alt=""></a>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="https://github.com/checkstyle/checkstyle">Checkstyle</a>
-                                    </h4>
-                                    <p class="card-text">
-                                    Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard.
-                                    </p>
-                                    <span class="badge badge-warning">open source</span>
-                                </div>
-                            </div>
-
-                            <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="img/ant.png" alt=""></a>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="https://github.com/wilcoln/ant-simulation">AntSimulation</a>
-                                    </h4>
-                                    <p class="card-text">
-                                    Numerical simulation of colonies of social insects and more specifically that of anthills, built with Java/JavaFX.
-                                    </p>
-                                    <span class="badge badge-primary">personal</span>
-                                </div>
-                            </div>
-
-
-                            <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="img/terrain.png" alt=""></a>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="https://github.com/wilcoln/tdg-gen">Tower Defense Game Generator</a>
-                                    </h4>
-                                    <p class="card-text">
-                                        A Tower defense game generator built with Java/Swing.
-                                    </p>
-                                    <span class="badge badge-secondary">academic</span>
-                                </div>
-                            </div>
-
-                            <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="img/hidoop.png" alt=""></a>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="https://github.com/wilcoln/hidoop">Hidoop</a>
-                                    </h4>
-                                    <p class="card-text">
-                                        A simplified clone of the famous Apache Hadoop.
-                                    </p>
-                                    <span class="badge badge-secondary">academic</span>
-                                </div>
-                            </div>
-
-                            <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="img/centralien.png" alt=""></a>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="http://centralien.org">Centralien Website</a>
-                                    </h4>
-                                    <p class="card-text">
-                                        Design and development of the website of the centralien study support group based in Cameroon. Built with Laravel & Vuejs
-                                    </p>
-                                    <span class="badge badge-success">freelance</span>
-                                </div>
-                            </div>
-
-                            <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="img/ambassade.png" alt=""></a>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="http://www.ambassade-algerie-cameroun.org/">Website of Algeria Embassy</a>
-                                    </h4>
-                                    <p class="card-text">
-                                        Co-development of the web site of Algeria embassy in Cameroon.
-                                    </p>
-                                    <span class="badge badge-danger">internship</span>
-                                </div>
-                            </div>
-
-                           
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>    
-</main>
-    
-    <div id="contact-me">
-    <footer class="footer">
-            <div class="container pt-5">
-                <div class="row">
-                <div class="col-md-6 text-center">
-                    <h1 class="mb-5 d-block">Stay tuned</h1> <br>
-                    <div class="media-links">
-                      <ul class="list-unstyled d-inline">
-                            <li class="media-link media-link__twitter d-inline-block"><a href="https://twitter.com/wilcoln_"> <i class="fa fa-twitter"> </i></a></li>
-                            <li class="media-link media-link__facebook d-inline-block"><a href="https://web.facebook.com/wilcolnB"> <i class="fa fa-facebook"> </i></a></li>
-                            <li class=" media-link media-link__linkedin d-inline-block"><a href="https://www.linkedin.com/in/wilcoln"> <i class="fa fa-linkedin"> </i></a></li>
-                          <li class="media-link media-link__github d-inline-block"><a href="https://www.github.com/wilcoln"> <i class="fa fa-github"> </i></a></li>
-                      </ul>
-                      <address class="row mt-5">
-                        <p class="m-auto text-center">
-                       <i class="fa fa-envelope"></i> &nbsp; wilcoln99 [at] gmail.com<br><br>
-                        <i class="fa fa-phone"></i> &nbsp;  (+33) 698 69 55 80<br><br>
-                        <i class="fa fa-map-marker"></i> &nbsp;  France, Toulouse
-                            <br><br>
-                        </p>
-                        
-                      </address>
-                    </div>
-                  </div>
-                    <div class="col-md-6 ml-auto">
-                        <div class="row text-center">
-                            <div class="col">
-                                <h1 class="px-5 pb-2 d-inline-block">Contact me</h1>
-                            </div>
-                        </div>
-                        <form id="contact-form" class="form" action="submit" method="post">
-                            <input type="hidden" name="_token" value="4LZMFvHahkMj57TOwp4ufE2l21CLXsVO1y2mt3tJ">
-                            <div class="form-group">
-                                <label for="name">Name
-                                    <span class="text-danger">*</span>
-                                </label>
-                                <input name="name" id="name" type="text" class="form-control" placeholder="Enter your name">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email
-                                    <span class="text-danger">*</span>
-                                </label>
-                                <input name="email" id="email" type="email" class="form-control" placeholder="example@gmail.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message
-                                    <span class="text-danger">*</span>
-                                </label>
-                                <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Enter your message"></textarea>
-                            </div>
-                            <input type="submit" class="btn btn-success btn-lg" value="send">
-                        </form>
-                    </div>
-                </div>
-                <div class="row copyright text-muted">
-                    <div class="col-12 text-center">
-                        Made with
-                        <i class="fa fa-heart text-danger"></i>
-                    </div>
-                    <div class="col-12 text-center">
-                        © Copyright 2020 wilcoln
-                    </div>
-                </div>
-            </div>
-    </footer>
-</div>    
-
-    <script src="js/app.js"></script>
-    <script>
-
-        // Décalage du chargement du fond de l'élément main.
-        setTimeout(function () {
-            $("main").css('background',"url('img/design-miax.jpg')");
-            $("main").css('background-attachment','fixed');
-            $("main").css('background-size','cover');
-        }, 250);
-
-       // Navbr and skills animation
-onscroll = function () {
-    let nav = $("nav");
-    let img = $("img");
-    if (scrollY > 100) {
-        nav.css('animation', 'navAnime 1s 0s ease-out');
-        nav.css('background', 'rgba(20,20,20, .8)');
-        nav.css('border-bottom', '2px solid #2196F3');
-        nav.css('box-shadow', '0 0.1rem 1rem rgba(0,0,0,.8)');
-        nav.css('text-shadow', 'none');
-    }
-    else {
-        nav.css('text-shadow', '0 .1rem 1rem rgba(0,0,0,.5)')
-        nav.css('background', 'none');
-        nav.css('animation', 'none');
-        nav.css('border-bottom', 'none');
-        nav.css('box-shadow', 'none');
-    }
-    if (scrollY > 1000) {
-        $('.my-skills-verbose').css('animation', 'moveInRightSoft 1.5s 0s ease-out');
-        $('.my-skills-progress').css('animation', 'moveInLeftSoft 1.5s 0s ease-out');
-        $('.my-skills-verbose').css('visibility', 'visible');
-        $('.my-skills-progress').css('visibility', 'visible');
-    }
-}
-    </script>
-    <script type="text/javascript" src="js/profile.js" async="" defer=""></script>
+        </main>   
     </body>
 </html>

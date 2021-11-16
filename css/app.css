@@ -91,8 +91,7 @@ nav .nav-item .nav-link.active {
 main img#me {
   max-width: 50%;
   border-radius: 100%;
-  -webkit-box-shadow: 0rem 2rem 4rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0rem 2rem 4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 
@@ -128,5 +127,4 @@ main section .card .badge{
 
 footer {
   text-align: center;
-  background-color: rgba(240, 240, 240, 0.8);
 }

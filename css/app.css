@@ -30,13 +30,13 @@ h1 {
   text-transform: capitalize;
   font-size: 3rem;
   font-weight: 700;
-  background-image: -webkit-gradient(linear, left top, right top, from(#1976D2), to(#79df7d));
-  background-image: linear-gradient(to right, #1976D2, #79df7d);
-  -webkit-background-clip: text;
-  color: transparent;
-  text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.2);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  /*background-image: -webkit-gradient(linear, left top, right top, from(#1976D2), to(#79df7d));*/
+  /*background-image: linear-gradient(to right, #1976D2, #79df7d);*/
+  /*-webkit-background-clip: text;*/
+  /*color: transparent;*/
+  /*text-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.2);*/
+  /*-webkit-backface-visibility: hidden;*/
+  /*        backface-visibility: hidden;*/
 }
 
 main section h2 {
